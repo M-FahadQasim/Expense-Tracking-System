@@ -1,19 +1,15 @@
 #include <iostream>
 #include <map>
 #include <string>
-
 using namespace std;
-
 // Structure to represent an expense
 struct Expense {
     string date;
     string description;
     double amount;
 };
-
 // Map to store expenses
 map<string, Expense> expenses;
-
 // Function to add an expense
 void addExpense() {
     Expense expense;
@@ -27,7 +23,6 @@ void addExpense() {
     expenses[expense.date + " - " + expense.description] = expense;
     cout << "Expense added successfully!" << endl;
 }
-
 // Function to modify an expense
 void modifyExpense() {
     string key;
@@ -50,7 +45,6 @@ void modifyExpense() {
         cout << "No Expense  found!" << endl;
     }
 }
-
 // Function to remove an expense
 void removeExpense() {
     string key;
@@ -64,7 +58,6 @@ void removeExpense() {
         cout << "Expense not found!" << endl;
     }
 }
-
 // Function to display weekly report
 void weeklyReport() {
     double total = 0;
@@ -74,7 +67,6 @@ void weeklyReport() {
     }
     cout << "Total expenses for the week: " << total << endl;
 }
-
 // Function to display monthly report
 void monthlyReport() {
     double total = 0;
@@ -89,7 +81,6 @@ void monthlyReport() {
     }
     cout << "Total expenses for the month: " << total << endl;
 }
-
 // Function to display yearly report
 void yearlyReport() {
     double total = 0;
@@ -104,7 +95,6 @@ void yearlyReport() {
     }
     cout << "Total expenses for the year: " << total << endl;
 }
-
 int main() {
     int choice;
     while (true) {
